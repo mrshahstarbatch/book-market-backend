@@ -1,12 +1,13 @@
-// book.js
 const mongoose = require('mongoose');
 
 const bookSchema = new mongoose.Schema({
   name: String,
-  imageUrl: String,
+  author: String,
+  subject: String,
   location: String,
-  contact: String
+  imageUrl: String, // ✅ changed from image → imageUrl
+  contact: String,
 }, { timestamps: true });
 
-const Book = mongoose.model('Book', bookSchema);
+const Book = mongoose.model('book', bookSchema);
 module.exports = Book;
