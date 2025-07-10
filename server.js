@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: 'https://mrshahstarbatch.github.io',
   methods: ['GET', 'POST'],
-  credentials: true
+  callowedHeaders: ['Content-Type'],
 }));
 
 app.use(express.json());
